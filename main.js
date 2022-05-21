@@ -11,9 +11,17 @@ function clear(){
         cameraButton.classList.remove('hide')
         clearButton.classList.remove('show')
       }
+     
 }
 
+function clearInput(){
+    input.value = ''
+    input.focus()
+    clearButton.classList.remove('show')
+    cameraButton.classList.remove('hide')
+}
 
 
 input.addEventListener('change', clear)
 input.addEventListener('keyup', clear);
+clearButton.addEventListener('click', clearInput)
